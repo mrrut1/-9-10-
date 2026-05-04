@@ -182,7 +182,7 @@ void readDepthFromTextFile(Trench trenches[], int size, const char* filename) {
     while (fin >> name >> newDepth) {
         found = false;
         for (int i = 0; i < size; i++) {
-            if (strcmp(trenches[i].name.c_str(), name) == 0) {  // ИСПРАВЛЕНО: .c_str()
+            if (strcmp(trenches[i].name.c_str(), name) == 0) {
                 cout << "Обновлена глубина впадины \"" << trenches[i].name
                     << "\": " << trenches[i].depth << " м -> " << newDepth << " м" << endl;
                 trenches[i].depth = newDepth;
